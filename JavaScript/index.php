@@ -1,29 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <title>JEU PIERRE FEUILLE CISEAUX</title>
+</head>
+<body>
+
 <header>
-
-    <h1> JEU PIERRE FEUILLE CISEAUX </h1>
-
-    <script src="script.js" defer> </script>
+    <h1>JEU PIERRE FEUILLE CISEAUX</h1>
 </header>
-
 
 <input id="pierre" type="button" value="Pierre"/>
 <input id="feuille" type="button" value="Feuille"/>
 <input id="ciseaux" type="button" value="Ciseaux"/>
 
-<br>
-<br>
+<br><br>
 
-<p> Choix du joueur : <p id="choixJ"> </p>
-<p> Choix de l'ordinateur : <p id="choixPC"> </p>
-
-<br>
-<br>
-
-<p> Comparaison du choix du joueur et de l'ordinateur :</p>
-<p id="resultat"></p>
+<div>Choix du joueur : <span id="choixJ"></span></div>
+<div>Choix de l'ordinateur : <span id="choixPC"></span></div>
 
 <br>
+
+<div>Comparaison du choix du joueur et de l'ordinateur :</div>
+<div id="resultat"></div>
+
 <br>
 
-<p> Résultat du jeu : </p>
-<p id="jeu"></p>
+<div>Résultat du jeu :</div>
+<div id="jeu"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
