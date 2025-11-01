@@ -1,72 +1,137 @@
-body {
-    font-family: "Segoe UI", Roboto, sans-serif;
-    background: linear-gradient(135deg, #f0f0f5, #dfe9f3);
-    color: #333;
-    text-align: center;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #e9eef6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     min-height: 100vh;
+    padding: 40px 0;
+}
+
+#cv {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+#infos {
+    background-color: #043382;
+    color: aliceblue;
+    padding: 2rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    white-space: pre-line;
+    border-right: 4px solid #01265c;
 }
 
-header {
-    background: #4c6ef5;
-    color: white;
-    width: 100%;
-    padding: 20px 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+#titre {
+    grid-column: 2 / 3;
+    font-size: 2.6rem;
+    font-family: "Arial Black", Arial, sans-serif;
+    text-align: left;
+    color: #043382;
+    margin-top: 2rem;
+    margin-bottom: 0.3rem;
 }
 
-h1 {
-    margin: 0;
-    letter-spacing: 2px;
+#soustitre {
+    grid-column: 2 / 3;
+    font-size: 1.5rem;
+    font-family: Arial, serif;
+    color: #1c3d7a;
+    margin-bottom: 2rem;
 }
 
-input[type="button"] {
-    background: #4c6ef5;
-    color: white;
-    border: none;
+#resume {
+    grid-column: 2 / 3;
+    background-color: #f7f9fc;
+    padding: 1.5rem 2rem;
     border-radius: 8px;
-    padding: 12px 20px;
-    margin: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 2rem 1.5rem 0;
+    white-space: pre-line;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
-input[type="button"]:hover {
-    background: #3b5bdb;
-    transform: translateY(-2px);
+#competences {
+    grid-column: 2 / 3;
+    list-style: none;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
 }
 
-div {
-    font-size: 18px;
-    margin-top: 10px;
+#competences li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    color: #333;
 }
 
-#jeu {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2b8a3e;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    background: #e9f5ec;
-    display: inline-block;
-    min-width: 250px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+#competences li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #043382;
+    font-size: 1.2rem;
+    line-height: 1rem;
 }
 
-#resultat {
-    color: #495057;
-    font-style: italic;
+#competences li:hover {
+    color: #043382;
+    transform: translateX(4px);
+    transition: all 0.2s ease;
 }
 
-@media (max-width: 600px) {
-    input[type="button"] {
-        width: 80%;
+@media (max-width: 768px) {
+    #cv {
+        grid-template-columns: 1fr;
+    }
+
+    #infos {
+        text-align: center;
+        border-right: none;
+        border-bottom: 4px solid #01265c;
+    }
+
+    #titre,
+    #soustitre,
+    #resume,
+    #competences {
+        grid-column: 1 / 2;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    #resume {
+        margin: 1rem;
+    }
+
+    #competences {
+        padding-left: 0;
+    }
+
+    #competences li {
+        padding-left: 0;
+    }
+
+    #competences li::before {
+        display: none;
     }
 }
